@@ -11,4 +11,4 @@ print(d)
 
 e = db.random_insert(10)
 print(e)
-db.dump()
+
