@@ -13,8 +13,7 @@ class MyDatabase():
         self.fileName = fileName
         self.autodump = autodump
 
-    def load_file(self): # Here the self is object or instance 
-        print("Loading database from",self.fileName)
+    def load_file(self): 
         if os.path.exists(self.fileName):
             content = open(self.fileName).read()
             self.json_object = json.loads(content)
@@ -23,17 +22,13 @@ class MyDatabase():
                 json.dump(self.json_object,data)
             content = open(self.fileName).read()
             self.json_object = json.loads(content)
-        print("Databse Loaded sucessfully")
         return self.json_object
 
     def dump(self):
-        print("Dumping databse to ",self.fileName)
         file_handler = open(self.fileName,'w')
         json_dump = json.dumps(self.json_object)
         file_handler.write(json_dump)
         file_handler.close()
-        print("Database dumped sucessfully")
-        print("Ok")
     
     def get(self,key):
         try:
