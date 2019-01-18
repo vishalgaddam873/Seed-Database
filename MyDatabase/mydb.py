@@ -29,6 +29,7 @@ class MyDatabase():
         json_dump = json.dumps(self.json_object)
         file_handler.write(json_dump)
         file_handler.close()
+        return True
     
     def get(self,key):
         try:
