@@ -14,6 +14,3 @@ db2.set('gender','Male')
 
 a = db1.dmerge('data/extradata.db')
 print(a)
-
-# db3 = mydb.load('data/student1.db')
-# db3.get('place')
