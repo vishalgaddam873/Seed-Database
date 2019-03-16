@@ -1,6 +1,6 @@
 # Small Db
 Small Db is lightweight, fast, and simple database based on the json module.
-# Fun with MyDatabase
+# Fun with Small Db
 
 ```
 >>> import mydb
