@@ -1,5 +1,5 @@
-# MyDatabase
-MyDatabase is lightweight, fast, and simple database based on the json module.
+# Small Db
+Small Db is lightweight, fast, and simple database based on the json module.
 # Fun with MyDatabase
 
 ```
