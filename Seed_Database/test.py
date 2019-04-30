@@ -1,7 +1,7 @@
-import mydb
+import seed
 
-db1 = mydb.load('data/student1.db',True)
-db2 = mydb.load('data/extradata.db',True)
+db1 = seed.load('data/student1.db',True)
+db2 = seed.load('data/extradata.db',True)
 
 db1.set('firstName','Vishal')
 db1.set('lastName','Gaddam')

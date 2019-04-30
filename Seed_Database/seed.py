@@ -2,18 +2,18 @@ import json
 import os
 import random
 
-def load(filename='hello.db',autodump=False):
-    MyDb = MyDatabase(filename,autodump)
-    MyDb.load_file()
-    return MyDb
+def load(filename='seed.db',autodump=False):
+    Seed = SeedDatabase(filename,autodump)
+    Seed.load_file()
+    return Seed
 
-class MyDatabase():
+class SeedDatabase():
     json_object = {}
     def __init__(self,fileName,autodump):
         self.fileName = fileName
         self.autodump = autodump
 
-    def load_file(self): 
+    def load_file(self):
         if os.path.exists(self.fileName):
             content = open(self.fileName).read()
             self.json_object = json.loads(content)
@@ -30,7 +30,7 @@ class MyDatabase():
         file_handler.write(json_dump)
         file_handler.close()
         return True
-    
+
     def get(self,key):
         try:
             dic = self.load_file()
@@ -62,7 +62,7 @@ class MyDatabase():
             return True
         else:
             return False
-    
+
     def total_keys(self):
         key_list = []
         dic = self.load_file()
@@ -80,7 +80,7 @@ class MyDatabase():
         dic = self.load_file()
         for i in range(number):
             random_keys = random.randint(0,10000)
-            random_values = random.randint(0,10000)   
+            random_values = random.randint(0,10000)
             dic[random_keys] = random_values
         self.auto_dump()
         return dic
@@ -91,7 +91,7 @@ class MyDatabase():
 
     def dmerge(self,otherDb):
         dic1 = self.load_file()
-        new_object = MyDatabase(otherDb,self.autodump)
+        new_object = SeedDatabase(otherDb,self.autodump)
         dic2 = new_object.load_file()
         dic1.update(dic2)
         self.auto_dump()

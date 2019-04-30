@@ -1,11 +1,11 @@
-# Small Db
+# Seed Database
 Small Db is lightweight, fast, and simple database based on the json module.
-# Fun with Small Db
+# Fun with Seed Database
 
 ```
->>> import mydb
+>>> import seed
 
->>> db = mydb.load('test.db', True)
+>>> db = seed.load('test.db', True)
 
 >>> db.set('key', 'value')
 
