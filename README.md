@@ -1,4 +1,5 @@
 <h1 align="center">Seed Database</h1>
+Created own database using concept of pickleDB where user can easily perform all CRUD operations using this user can easily store his data in json file. This is one kind of non-relational database.
 
 Seed Database is lightweight, fast, and simple database based on the json module.
 
