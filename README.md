@@ -11,8 +11,6 @@ Install important tools using command :
 Clone this app using the command:
   * `git clone https://github.com/vishalgaddam873/Seed-Database.git`
 
-
-### Step 3:
 create a database using command:
   * `python3 test.py`
 
