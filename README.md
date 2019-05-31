@@ -12,6 +12,7 @@ Clone this app using the command:
   * `git clone https://github.com/vishalgaddam873/Seed-Database.git`
 
 create a database using command:
+  * `cd Seed-Database/`
   * `python3 test.py`
 
 
